@@ -1,17 +1,17 @@
-var app = angular.module('myapp', ['ui.router'])
+var app = angular.module('myapp', ['ui.router', 'templates'])
 
           .config(function config($stateProvider){
            
            $stateProvider.state("first", {
-           	url : "/first",
+           	url : "",
            	controller : "FirstCtrl as first",
-           	templateUrl: "first.html"
+           	templateUrl: "templates/first.html"
            })
 
            .state("second", {
            	url : "/second",
            	controller : "SecondCtrl as second",
-           	templateUrl : "second.html"
+           	templateUrl : "templates/second.html"
            })
 
           })
