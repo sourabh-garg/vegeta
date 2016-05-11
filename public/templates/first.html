@@ -1,17 +1,21 @@
-<input type="text" ng-model="first.greeting.message"/>
-
-<div>
-
-{{ first.greeting.message }}
-
-</div>
-
-<div>
-	<br>
-	<input type="text" ng-model="first.data.message"/>
-
-	<h1>{{first.data.message | reverse}}</h1>
+<h1> Angular-rails </h1>
+<h2>{{first.message}}</h2>
+<div ng-repeat="article in first.data">
+	<h2>{{article.title}}</h2>
+	<h2>{{article.description}}</h2>
+	<h2><a href="#" ng-click="first.showme(article)">{{article.id}}</a></h2>
+	<h2><a href="#" ng-click="first.deleteme(article)">{{article.title}}</a></h2>
 
 </div>
-<elem></elem>
-<a ui-sref="second">Go to second</a>
+
+<div>
+<label>title</label>
+<input type="text" ng-model="first.title">
+<br>
+<br>
+<label>Description</label>
+<input type="text" ng-model="first.description">
+<br><br>
+
+<button type="button" ng-click="first.create(first.title, first.description )">Create Article</button>
+</div>
